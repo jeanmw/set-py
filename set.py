@@ -2,7 +2,7 @@ from itertools import combinations
 import random
 
 COLORS = ["red", "green", "purple"]
-SHAPES = ["pill", "diamond", "toothpaste"]
+SHAPES = ["bean", "diamond", "toothpaste"]
 NUMBERS = [1, 2, 3]
 FILLS = ["solid", "fuzzy", "empty"]
 
