@@ -29,6 +29,10 @@ def initialize_cards():
     cards = []
     while len(cards) < 8:
         cards.append(random_card())
+    print("Available cards:")
+    for card in cards:
+        print(card.__dict__)
+        print("-------------------")
     return cards
 
 def is_attribute_match(a0, a1, a2):
@@ -56,8 +60,8 @@ def get_num_sets(cards):
         if is_set(c[0], c[1], c[2]):
             print("found set!")
             num_sets += 1
-        print(c[0].__dict__, c[1].__dict__, c[2].__dict__)
-        print("-------------------")
+            print(c[0].__dict__, c[1].__dict__, c[2].__dict__)
+            print("-------------------")
     pluralized_nounage = "set" if num_sets == 1 else "sets"
     print(f"Got {num_sets} {pluralized_nounage}")
     return num_sets
