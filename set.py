@@ -23,7 +23,6 @@ def random_card():
         number=random_value(NUMBERS),
         fill=random_value(FILLS)
     )
-    print(card)
     return card
 
 def initialize_cards():
@@ -55,9 +54,10 @@ def get_num_sets(cards):
     comb = combinations(cards, 3)
     for c in comb:
         if is_set(c[0], c[1], c[2]):
-            print("is set")
-            print(c[0].__dict__, c[1].__dict__, c[2].__dict__)
+            print("found set!")
             num_sets += 1
+        print(c[0].__dict__, c[1].__dict__, c[2].__dict__)
+        print("-------------------")
     pluralized_nounage = "set" if num_sets == 1 else "sets"
     print(f"Got {num_sets} {pluralized_nounage}")
     return num_sets
