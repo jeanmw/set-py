@@ -7,4 +7,5 @@ is either all the same or all different.
 
 More information [here](https://www.amazon.com/SET-Family-Game-Visual-Perception/dp/B00000IV34) and [here](https://www.setgame.com/welcome).
 
-To run, simply call `python3 set.py`. This will generate an array of cards and print the set of cards as well as the number of sets present.
+This tiny program lets your computer play set. To run, simply ensure you have python3 installed
+and call `python3 set.py` from the project's directory. This will generate an array of cards and print the values for valid sets of cards as well as the number of sets present.
