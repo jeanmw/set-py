@@ -33,7 +33,9 @@ def initialize_cards():
     return cards
 
 def is_attribute_match(a0, a1, a2):
-    if (a0 == a1 == a2) or ((a0 != a1) and (a1 != a2)):
+    if (a0 == a1 == a2):
+        return True
+    if ((a0 != a1) and (a1 != a2) and (a0 != a2)):
         return True
     return False
 
@@ -56,7 +58,8 @@ def get_num_sets(cards):
             print("is set")
             print(c[0].__dict__, c[1].__dict__, c[2].__dict__)
             num_sets += 1
-    print("Got " + str(num_sets) + " sets")
+    pluralized_nounage = "set" if num_sets == 1 else "sets"
+    print(f"Got {num_sets} {pluralized_nounage}")
     return num_sets
 
 def run_game():
